@@ -1,0 +1,261 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "ADMIN SIMULATOR MCSUK AND ASTRO AND MOTHERFUCKING CASTER", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--Main
+
+
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local MainSection = Main:AddSection({
+	Name = "Main"
+})
+
+
+OrionLib:MakeNotification({
+	Name = "Loaded up",
+	Content = "MCSUK IS THE WORST!",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+
+
+Main:AddButton({
+	Name = "AutoClicker",
+	Callback = function()
+while wait(0.01) do
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedRemotes"):WaitForChild("lift"):FireServer(unpack(args))
+end
+  	end    
+})
+
+
+Main:AddButton({
+	Name = "AutoRebirth",
+	Callback = function()
+while wait(0.1) do
+game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedRemotes"):WaitForChild("ultraLift"):FireServer()
+end
+  	end    
+})
+
+
+
+Main:AddButton({
+	Name = "Open Cmdbar",
+	Callback = function()
+local args = {
+    [1] = ":cmdbar"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+  	end    
+})
+
+
+Main:AddButton({
+	Name = "Open Logs",
+	Callback = function()
+local args = {
+    [1] = ":logs "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+  	end    
+})
+
+
+Main:AddButton({
+	Name = "FF wait for 3s",
+	Callback = function()
+while wait(3) do
+local args = {
+    [1] = ":ff"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+end
+  	end    
+})
+
+
+Main:AddButton({
+	Name = "Fly",
+	Callback = function()
+ local args = {
+    [1] = ":fly"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+  	end    
+})
+
+
+--Dont get fucked by higher ranks
+
+
+local Uncommands = Window:MakeTab({
+	Name = "Uncommands",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local UncommandsSection = Uncommands:AddSection({
+	Name = "Uncommands"
+})
+
+
+Uncommands:AddButton({
+	Name = "Unmute",
+	Callback = function()
+local args = {
+    [1] = ":unmute "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+  	end    
+})
+
+
+Uncommands:AddButton({
+	Name = "Unpunish",
+	Callback = function()
+local args = {
+    [1] = ":unpunish "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+  	end    
+})
+
+
+Uncommands:AddButton({
+	Name = "Unpurgatory",
+	Callback = function()
+local args = {
+    [1] = ":unpurgatory "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+  	end    
+})
+
+
+--Others
+
+
+local Others = Window:MakeTab({
+	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local OthersSection = Others:AddSection({
+	Name = "Others"
+})
+
+
+Others:AddButton({
+	Name = "Fake rank all 5K+",
+	Callback = function()
+local args = {
+    [1] = ":notice all You've been ranked to 'LegacyCreator'!"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+  	end    
+})
+
+
+Others:AddButton({
+	Name = "Naked 4K+",
+	Callback = function()
+local args = {
+    [1] = ":pants all 0 :shirt all 0'!"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+
+        end	
+})
+
+Others:AddButton({
+	Name = "Fake Gift all triple hatch 5K+",
+	Callback = function()
+local args = {
+    [1] = ":notice all You've been Gifted 'Triple Hatch' By (Server"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+  	end    
+})
+
+Others:AddButton({
+	Name = "Fake Gift all gamepasses 5K+",
+	Callback = function()
+local args = {
+    [1] = ":notice all You've been Gifted all Gamepasses by (Server) "
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+  	end    
+})
+
+Others:AddButton({
+	Name = "Doomsday all 10K+",
+	Callback = function()
+local args = {
+    [1] = ":doomsday all "
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+  	end    
+})
+
+
+--Credits
+
+
+local Credits = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local CreditsSection = Credits:AddSection({
+	Name = "Made by MCSUK/ASTRO/CASTER"
+})
+
+
+local CreditsSection = Credits:AddSection({
+	Name = "ASTRO IS THE BEST LOL"
+})
+
+
+local CreditsSection = Credits:AddSection({
+	Name = "TEAM CASTER FR BITCHES"
+})
+
+OrionLib:Init()
