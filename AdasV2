@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "ADMIN SIMULATOR MCSUK/ASTRO/CASTER", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Admin Simulator AdasV2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --Main
 
@@ -201,7 +201,7 @@ Others:AddButton({
 	Name = "Fake Gift all triple hatch 5K+",
 	Callback = function()
 local args = {
-    [1] = ":notice all You've been Gifted 'Triple Hatch' By (Server"
+    [1] = ":notice all You've been Gifted 'Triple Hatch' By (Server)"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
